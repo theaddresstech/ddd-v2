@@ -14,7 +14,6 @@
         "spatie/laravel-activitylog": "^4.0",
         "spatie/laravel-query-builder": "^5.0",
         "livewire/livewire": "^2.10",
-        "laravel/ui": "^3.4",
         "laravel/passport": "^11.3"
     },
     "autoload": {
