@@ -1,11 +1,11 @@
 {
-    "name": "islam/ddd",
+    "name": "theaddresstech/ddd",
     "description": "DDD Laravel-structure-generator",
     "license": "MIT",
     "minimum-stability": "dev",
     "authors": [
         {
-            "name": "islam",
+            "name": "theaddresstech",
             "email": "islamadel295@yahoo.com"
         }
     ],
