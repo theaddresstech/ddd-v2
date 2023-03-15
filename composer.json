@@ -1,0 +1,42 @@
+{
+    "name": "islam/ddd",
+    "description": "DDD Laravel-structure-generator",
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "authors": [
+        {
+            "name": "islam",
+            "email": "islamadel295@yahoo.com"
+        }
+    ],
+    "require": {
+        "prettus/l5-repository": "^2.8",
+        "spatie/laravel-activitylog": "^4.0",
+        "spatie/laravel-query-builder": "^5.0",
+        "livewire/livewire": "^2.10",
+        "laravel/ui": "^3.4",
+        "laravel/passport": "^11.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "islamss\\DDD\\":"src/",
+            "App\\":"app/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "islamss\\DDD\\":"src/",
+            "Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel":{
+            "providers":[
+                "islamss\\DDD\\DomainDriverDesignServiceProvider"
+            ]
+        }
+    },
+    "require-dev": {
+        "orchestra/testbench": "^5.1"
+    }
+}

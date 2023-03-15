@@ -1,0 +1,7 @@
+<?php
+
+namespace Src\Domain\{{DOMAIN}}\Entities\Traits\CustomAttributes;
+
+trait {{NAME}}Attributes
+{
+}
