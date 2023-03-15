@@ -18,7 +18,7 @@ to Install This Package Following this steps:
 
   3-setup package by writting folowing command : 
   
-      `composer require islamss/ddd`
+      `composer require theaddresstech/ddd`
       
  # usage 
  
