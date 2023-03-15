@@ -26,7 +26,7 @@ to Install This Package Following this steps:
   
   1-First command :
   
-      `composer require dddd:directory`
+      `composer require ddd:directory`
       
    after run  `composer require dddd:directory` will generate `src` folder in base path this folder contain 3 major folders:
  
