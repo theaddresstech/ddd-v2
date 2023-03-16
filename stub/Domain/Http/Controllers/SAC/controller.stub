@@ -6,7 +6,6 @@ use Src\Infrastructure\Http\AbstractControllers\BaseController as Controller;
 use Src\Domain\{{DOMAIN}}\Repositories\Contracts\{{NAME_REPO}};
 use Illuminate\Http\Request;
 use theaddresstech\DDD\Traits\Responder;
-use Src\Domain\{{DOMAIN}}\Entities\{{NAME}};
 use Src\Domain\{{DOMAIN}}\Http\Resources\{{API_RESOURCE_NAME}}\{{API_RESOURCE_NAME}}ResourceCollection;
 use Src\Domain\{{DOMAIN}}\Http\Resources\{{API_RESOURCE_NAME}}\{{API_RESOURCE_NAME}}Resource;
 
