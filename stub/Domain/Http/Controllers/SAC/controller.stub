@@ -1,0 +1,73 @@
+<?php
+
+namespace Src\Domain\{{DOMAIN}}\Http\Controllers;
+
+use Src\Infrastructure\Http\AbstractControllers\BaseController as Controller;
+use Src\Domain\{{DOMAIN}}\Repositories\Contracts\{{NAME_REPO}};
+use Illuminate\Http\Request;
+use theaddresstech\DDD\Traits\Responder;
+use Src\Domain\{{DOMAIN}}\Entities\{{NAME}};
+use Src\Domain\{{DOMAIN}}\Http\Resources\{{API_RESOURCE_NAME}}\{{API_RESOURCE_NAME}}ResourceCollection;
+use Src\Domain\{{DOMAIN}}\Http\Resources\{{API_RESOURCE_NAME}}\{{API_RESOURCE_NAME}}Resource;
+
+class {{NAME}}Controller extends Controller
+{
+    use Responder;
+
+    /**
+     * @var {{NAME_REPO}}
+     */
+    protected ${{NAME_REPO_VAR}};
+
+    /**
+     * View Path
+     *
+     * @var string
+     */
+    protected $viewPath = '{{VIEW_RESOURCE}}';
+
+    /**
+     * Resource Route.
+     *
+     * @var string
+     */
+    protected $resourceRoute = '{{RESOURCE_ROUTE_NAME}}';
+
+    /**
+     * Domain Alias.
+     *
+     * @var string
+     */
+    protected $domainAlias = '{{DOMAIN_ALIAS}}';
+
+
+    /**
+     * @param {{NAME_REPO}} ${{NAME_REPO_VAR}}
+     */
+    public function __construct({{NAME_REPO}} ${{NAME_REPO_VAR}})
+    {
+        $this->{{NAME_REPO_VAR}} = ${{NAME_REPO_VAR}};
+    }
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function __invoke(Request $request)
+    {
+        $index = $this->{{NAME_REPO_VAR}}->spatie()->all();
+
+        $this->setData('title', __('main.show-all') . ' ' . __('main.{{VIEW_RESOURCE}}'));
+
+        $this->setData('alias', $this->domainAlias);
+
+        $this->setData('data', $index);
+
+        $this->addView("{$this->domainAlias}::{$this->viewPath}.index");
+
+        $this->useCollection({{API_RESOURCE_NAME}}ResourceCollection::class,'data');
+
+        return $this->response();
+    }
+}
