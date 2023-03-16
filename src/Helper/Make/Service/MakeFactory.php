@@ -28,7 +28,7 @@ class MakeFactory{
      * @var array
      */
     public static $namespace=[
-        'islamss',
+        'theaddresstech',
         'DDD',
         'Helper',
         'Make',
@@ -72,7 +72,7 @@ class MakeFactory{
         $files = ArrayFormatter::files(File::files(Path::helper('Make','Types')));
 
         array_walk($files,function(&$class){
-            $class = NamespaceCreator::Segments('islamss','DDD','Helper','Make','Types',$class);
+            $class = NamespaceCreator::Segments('theaddresstech','DDD','Helper','Make','Types',$class);
         });
 
         $keys=[];
