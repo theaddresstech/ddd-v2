@@ -14,11 +14,11 @@ to Install This Package Following this steps:
       },
   2- run following command :
   
-      `composer dump-autoload` 
+      composer dump-autoload
 
   3-setup package by writting folowing command : 
   
-      `composer require theaddresstech/ddd`
+      composer require theaddresstech/ddd
       
  # usage 
  
@@ -26,9 +26,9 @@ to Install This Package Following this steps:
   
   1-First command :
   
-      `composer require ddd:directory`
+      php artisan ddd:directory
       
-   after run  `composer require dddd:directory` will generate `src` folder in base path this folder contain 3 major folders:
+   after run  php artisan ddd:directory will generate `src` folder in base path this folder contain 3 major folders:
  
     1-Common: this will contain all common folders such as :
         
