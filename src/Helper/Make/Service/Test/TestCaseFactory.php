@@ -1,11 +1,11 @@
 <?php
 
-namespace islamss\DDD\Helper\Make\Service\Test;
+namespace theaddresstech\DDD\Helper\Make\Service\Test;
 
 use Illuminate\Support\Str;
-use islamss\DDD\Helper\Path;
-use islamss\DDD\Helper\ArrayFormatter;
-use islamss\DDD\Helper\NamespaceCreator;
+use theaddresstech\DDD\Helper\Path;
+use theaddresstech\DDD\Helper\ArrayFormatter;
+use theaddresstech\DDD\Helper\NamespaceCreator;
 use ReflectionClass;
 
 class TestCaseFactory

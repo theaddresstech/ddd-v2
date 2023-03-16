@@ -1,18 +1,18 @@
 <?php
 
-namespace islamss\DDD\Helper\Make\Types;
+namespace theaddresstech\DDD\Helper\Make\Types;
 
 use Reflection;
 use ReflectionClass;
 use Illuminate\Support\Str;
-use islamss\DDD\Helper\Path;
-use islamss\DDD\Helper\Naming;
-use islamss\DDD\Helper\Make\Maker;
-use islamss\DDD\Helper\FileCreator;
+use theaddresstech\DDD\Helper\Path;
+use theaddresstech\DDD\Helper\Naming;
+use theaddresstech\DDD\Helper\Make\Maker;
+use theaddresstech\DDD\Helper\FileCreator;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Artisan;
-use islamss\DDD\Helper\Make\Types\Allow;
-use islamss\DDD\Helper\NamespaceCreator;
+use theaddresstech\DDD\Helper\Make\Types\Allow;
+use theaddresstech\DDD\Helper\NamespaceCreator;
 
 class Relations extends Maker
 {

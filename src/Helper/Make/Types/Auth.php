@@ -1,8 +1,8 @@
 <?php
 
-namespace islamss\DDD\Helper\Make\Types;
+namespace theaddresstech\DDD\Helper\Make\Types;
 
-use islamss\DDD\Helper\Make\Maker;
+use theaddresstech\DDD\Helper\Make\Maker;
 
 class Auth extends Maker
 {

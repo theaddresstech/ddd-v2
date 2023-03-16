@@ -1,6 +1,6 @@
 <?php
 
-namespace islamss\DDD\Helper;
+namespace theaddresstech\DDD\Helper;
 
 use Illuminate\Support\Arr;
 use Illuminate\Support\Str;

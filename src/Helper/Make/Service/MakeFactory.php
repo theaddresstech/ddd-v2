@@ -1,21 +1,21 @@
 <?php
 
-namespace islamss\DDD\Helper\Make\Service;
+namespace theaddresstech\DDD\Helper\Make\Service;
 
-use islamss\DDD\Helper\ArrayFormatter;
+use theaddresstech\DDD\Helper\ArrayFormatter;
 use Illuminate\Support\Str;
-use islamss\DDD\Helper\Make\Maker;
-use islamss\DDD\Helper\Make\Service\NullMaker;
-use islamss\DDD\Helper\Make\Types\Controller;
-use islamss\DDD\Helper\Make\Types\DatabaseView;
-use islamss\DDD\Helper\Make\Types\Datatable;
-use islamss\DDD\Helper\Make\Types\Domain;
-use islamss\DDD\Helper\Make\Types\Entity;
-use islamss\DDD\Helper\Make\Types\Factory;
-use islamss\DDD\Helper\Make\Types\Migration;
-use islamss\DDD\Helper\Make\Types\Seeder;
-use islamss\DDD\Helper\NamespaceCreator;
-use islamss\DDD\Helper\Path;
+use theaddresstech\DDD\Helper\Make\Maker;
+use theaddresstech\DDD\Helper\Make\Service\NullMaker;
+use theaddresstech\DDD\Helper\Make\Types\Controller;
+use theaddresstech\DDD\Helper\Make\Types\DatabaseView;
+use theaddresstech\DDD\Helper\Make\Types\Datatable;
+use theaddresstech\DDD\Helper\Make\Types\Domain;
+use theaddresstech\DDD\Helper\Make\Types\Entity;
+use theaddresstech\DDD\Helper\Make\Types\Factory;
+use theaddresstech\DDD\Helper\Make\Types\Migration;
+use theaddresstech\DDD\Helper\Make\Types\Seeder;
+use theaddresstech\DDD\Helper\NamespaceCreator;
+use theaddresstech\DDD\Helper\Path;
 use Illuminate\Console\Command;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\File;

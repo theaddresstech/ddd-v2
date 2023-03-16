@@ -7,7 +7,7 @@ use Src\Domain\{{DOMAIN}}\Http\Requests\{{NAME_REQUEST}}\{{NAME_REQUEST_STORE}};
 use Src\Domain\{{DOMAIN}}\Http\Requests\{{NAME_REQUEST}}\{{NAME_REQUEST_UPDATE}};
 use Src\Domain\{{DOMAIN}}\Repositories\Contracts\{{NAME_REPO}};
 use Illuminate\Http\Request;
-use islamss\DDD\Traits\Responder;
+use theaddresstech\DDD\Traits\Responder;
 use Src\Domain\{{DOMAIN}}\Entities\{{NAME}};
 use Src\Domain\{{DOMAIN}}\Http\Resources\{{API_RESOURCE_NAME}}\{{API_RESOURCE_NAME}}ResourceCollection;
 use Src\Domain\{{DOMAIN}}\Http\Resources\{{API_RESOURCE_NAME}}\{{API_RESOURCE_NAME}}Resource;

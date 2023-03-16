@@ -1,6 +1,6 @@
 <?php
 
-namespace islamss\DDD\Helper;
+namespace theaddresstech\DDD\Helper;
 
 use islam\DDD\Helper\Make\Types\Seeder;
 use Illuminate\Support\Arr;

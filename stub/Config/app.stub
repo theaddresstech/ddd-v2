@@ -165,7 +165,7 @@ return [
         /*
          * Package Service Providers...
          */
-        islamss\DDD\DomainDriverDesignServiceProvider::class,
+        theaddresstech\DDD\DomainDriverDesignServiceProvider::class,
         /*
          * Application Service Providers...
          */

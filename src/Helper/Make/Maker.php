@@ -1,11 +1,11 @@
 <?php
 
-namespace islamss\DDD\Helper\Make;
+namespace theaddresstech\DDD\Helper\Make;
 
-use islamss\DDD\Helper\ArrayFormatter;
-use islamss\DDD\Helper\FileCreator;
-use islamss\DDD\Helper\Path;
-use islamss\DDD\Helper\Stub;
+use theaddresstech\DDD\Helper\ArrayFormatter;
+use theaddresstech\DDD\Helper\FileCreator;
+use theaddresstech\DDD\Helper\Path;
+use theaddresstech\DDD\Helper\Stub;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;

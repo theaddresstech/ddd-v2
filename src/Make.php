@@ -1,11 +1,11 @@
 <?php
 
-namespace islamss\DDD;
+namespace theaddresstech\DDD;
 
-use islamss\DDD\Helper\FileCreator;
+use theaddresstech\DDD\Helper\FileCreator;
 use Illuminate\Console\Command;
-use islamss\DDD\Helper\Make\Service\MakeFactory;
-use islamss\DDD\Helper\Make\Service\NullMaker;
+use theaddresstech\DDD\Helper\Make\Service\MakeFactory;
+use theaddresstech\DDD\Helper\Make\Service\NullMaker;
 use Illuminate\Support\Facades\Artisan;
 
 class Make extends Command

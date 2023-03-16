@@ -1,5 +1,5 @@
 <?php
-namespace islamss\DDD\Traits;
+namespace theaddresstech\DDD\Traits;
 
 use Illuminate\View\View;
 

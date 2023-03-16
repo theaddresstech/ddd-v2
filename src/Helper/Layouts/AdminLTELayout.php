@@ -1,8 +1,8 @@
 <?php
 
-namespace islamss\DDD\Helper\Layouts;
+namespace theaddresstech\DDD\Helper\Layouts;
 
-use islamss\DDD\Helper\Path;
+use theaddresstech\DDD\Helper\Path;
 use Illuminate\Support\Facades\File;
 
 class AdminLTELayout extends Layout{

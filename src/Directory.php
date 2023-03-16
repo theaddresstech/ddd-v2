@@ -1,14 +1,14 @@
 <?php
 
-namespace islamss\DDD;
+namespace theaddresstech\DDD;
 
-use islamss\DDD\Helper\ArrayFormatter;
-use islamss\DDD\Helper\Make\Types\Domain;
-use islamss\DDD\Helper\Make\Types\FirstDomain;
-use islamss\DDD\Helper\Path;
+use theaddresstech\DDD\Helper\ArrayFormatter;
+use theaddresstech\DDD\Helper\Make\Types\Domain;
+use theaddresstech\DDD\Helper\Make\Types\FirstDomain;
+use theaddresstech\DDD\Helper\Path;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\File;
-use islamss\DDD\Helper\Stub;
+use theaddresstech\DDD\Helper\Stub;
 use Illuminate\Support\Facades\Artisan;
 
 

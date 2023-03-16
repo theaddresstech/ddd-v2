@@ -1,6 +1,6 @@
 <?php
 
-namespace islamss\DDD\Helper\Layouts;
+namespace theaddresstech\DDD\Helper\Layouts;
 
 class LayoutFactory{
 

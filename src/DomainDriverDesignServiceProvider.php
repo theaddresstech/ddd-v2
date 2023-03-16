@@ -1,10 +1,10 @@
 <?php
 
-namespace islamss\DDD;
+namespace theaddresstech\DDD;
 
-use islamss\DDD\Make;
-use islamss\DDD\Build;
-use islamss\DDD\Directory;
+use theaddresstech\DDD\Make;
+use theaddresstech\DDD\Build;
+use theaddresstech\DDD\Directory;
 use Illuminate\Support\ServiceProvider;
 
 class DomainDriverDesignServiceProvider extends ServiceProvider{

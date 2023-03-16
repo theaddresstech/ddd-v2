@@ -1,9 +1,9 @@
 <?php
 
-namespace islamss\DDD\Helper\Make\Types;
+namespace theaddresstech\DDD\Helper\Make\Types;
 
-use islamss\DDD\Helper\Make\Maker;
-use islamss\DDD\Helper\Make\Service\Test\TestCaseFactory;
+use theaddresstech\DDD\Helper\Make\Maker;
+use theaddresstech\DDD\Helper\Make\Service\Test\TestCaseFactory;
 
 class Test extends Maker
 {

@@ -1,16 +1,16 @@
 <?php
 
-namespace islamss\DDD\Helper;
+namespace theaddresstech\DDD\Helper;
 
-use islamss\DDD\Helper\Make\Types\Controller;
-use islamss\DDD\Helper\Make\Types\DatabaseView;
-use islamss\DDD\Helper\Make\Types\Datatable;
-use islamss\DDD\Helper\Make\Types\Domain;
-use islamss\DDD\Helper\Make\Types\Entity;
-use islamss\DDD\Helper\Make\Types\Factory;
-use islamss\DDD\Helper\Make\Types\Migration;
-use islamss\DDD\Helper\Make\Types\Seeder;
-use islamss\Support\Arr;
+use theaddresstech\DDD\Helper\Make\Types\Controller;
+use theaddresstech\DDD\Helper\Make\Types\DatabaseView;
+use theaddresstech\DDD\Helper\Make\Types\Datatable;
+use theaddresstech\DDD\Helper\Make\Types\Domain;
+use theaddresstech\DDD\Helper\Make\Types\Entity;
+use theaddresstech\DDD\Helper\Make\Types\Factory;
+use theaddresstech\DDD\Helper\Make\Types\Migration;
+use theaddresstech\DDD\Helper\Make\Types\Seeder;
+use theaddresstech\Support\Arr;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;
 

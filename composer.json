@@ -18,20 +18,20 @@
     },
     "autoload": {
         "psr-4": {
-            "islamss\\DDD\\":"src/",
+            "theaddresstech\\DDD\\":"src/",
             "App\\":"app/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "islamss\\DDD\\":"src/",
+            "theaddresstech\\DDD\\":"src/",
             "Tests\\": "tests/"
         }
     },
     "extra": {
         "laravel":{
             "providers":[
-                "islamss\\DDD\\DomainDriverDesignServiceProvider"
+                "theaddresstech\\DDD\\DomainDriverDesignServiceProvider"
             ]
         }
     },

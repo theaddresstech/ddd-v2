@@ -1,13 +1,13 @@
 <?php
 
-namespace islamss\DDD\Helper\Make\Types;
+namespace theaddresstech\DDD\Helper\Make\Types;
 
-use islamss\DDD\Helper\Make\Maker;
-use islamss\DDD\Helper\Naming;
-use islamss\DDD\Helper\Path;
+use theaddresstech\DDD\Helper\Make\Maker;
+use theaddresstech\DDD\Helper\Naming;
+use theaddresstech\DDD\Helper\Path;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;
-use islamss\DDD\Helper\NamespaceCreator;
+use theaddresstech\DDD\Helper\NamespaceCreator;
 
 class Magic extends Maker
 {
