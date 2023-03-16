@@ -121,7 +121,7 @@ class Directory extends Command
     private function bootstrap(){
         // Set Config App
         File::put(config_path('app.php'),$this->getStub('config-app'));
-        File::put(lang_path('en'.DIRECTORY_SEPARATOR.'main.php'),$this->getStub('main-translation'));
+        //File::put(lang_path('en'.DIRECTORY_SEPARATOR.'main.php'),$this->getStub('main-translation'));
         File::put(config_path('auth.php'),$this->getStub('config-auth'));
         File::put(config_path('cors.php'),$this->getStub('config-cors'));
         // File::put(config_path('lighthouse.php'),$this->getStub('config-lighthouse'));
