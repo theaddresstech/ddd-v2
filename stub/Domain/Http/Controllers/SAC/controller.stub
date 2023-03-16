@@ -1,6 +1,6 @@
 <?php
 
-namespace Src\Domain\{{DOMAIN}}\Http\Controllers;
+namespace Src\Domain\{{DOMAIN}}\Http\Controllers\SAC;
 
 use Src\Infrastructure\Http\AbstractControllers\BaseController as Controller;
 use Src\Domain\{{DOMAIN}}\Repositories\Contracts\{{NAME_REPO}};
