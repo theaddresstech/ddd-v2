@@ -14,7 +14,7 @@ to Install This Package Following this steps:
       },
   2- run following command :
   
-      `composer dump-autoload` 
+      composer dump-autoload
 
   3-setup package by writting folowing command : 
   
