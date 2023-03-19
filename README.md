@@ -87,7 +87,7 @@ to Install This Package Following this steps:
       
     the command will modify the Kenel namespace in the `boostrap/app.php` + overwrite the service-providers namespaces in `config/app.php`
  
- 2- second command : `php artisan dddd:make {type}`
+ 2- second command : `php artisan ddd:make {type}`
  
     `{type}` can be : 
     
