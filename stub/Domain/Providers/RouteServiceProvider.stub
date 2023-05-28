@@ -40,17 +40,17 @@ class RouteServiceProvider extends ServiceProvider
         Route::middleware('web')
             ->prefix(config('system.admin.prefix'))
             ->namespace($this->namespace)
-            ->group(base_path('Src/Domain/{{NAME}}/Routes/web/public.php'));
+            ->group(base_path('src/Domain/{{NAME}}/Routes/web/public.php'));
 
         Route::middleware('web')
             ->prefix(config('system.admin.prefix'))
             ->namespace($this->namespace)
-            ->group(base_path('Src/Domain/{{NAME}}/Routes/web/guest.php'));
+            ->group(base_path('src/Domain/{{NAME}}/Routes/web/guest.php'));
 
         Route::middleware('web')
             ->prefix(config('system.admin.prefix'))
             ->namespace($this->namespace)
-            ->group(base_path('Src/Domain/{{NAME}}/Routes/web/auth.php'));
+            ->group(base_path('src/Domain/{{NAME}}/Routes/web/auth.php'));
 
     }
 
@@ -67,18 +67,18 @@ class RouteServiceProvider extends ServiceProvider
             ->prefix('api/')
             ->name('api.')
             ->namespace($this->namespace)
-            ->group(base_path("Src/Domain/{{NAME}}/Routes/api/public.php"));
+            ->group(base_path("src/Domain/{{NAME}}/Routes/api/public.php"));
 
         Route::middleware('api')
             ->prefix('api/')
             ->name('api.')
             ->namespace($this->namespace)
-            ->group(base_path("Src/Domain/{{NAME}}/Routes/api/guest.php"));
+            ->group(base_path("src/Domain/{{NAME}}/Routes/api/guest.php"));
 
         Route::middleware('api')
             ->prefix('api/')
             ->name('api.')
             ->namespace($this->namespace)
-            ->group(base_path("Src/Domain/{{NAME}}/Routes/api/auth.php"));
+            ->group(base_path("src/Domain/{{NAME}}/Routes/api/auth.php"));
     }
 }
