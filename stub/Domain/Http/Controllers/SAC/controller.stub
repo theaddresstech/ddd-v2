@@ -55,15 +55,13 @@ class {{NAME}}Controller extends Controller
      */
     public function __invoke(Request $request)
     {
-        $index = $this->{{NAME_REPO_VAR}}->spatie()->all();
+        $index = $this->{{NAME_REPO_VAR}}->spatie()->paginate();
 
         $this->setData('title', __('main.show-all') . ' ' . __('main.{{VIEW_RESOURCE}}'));
 
         $this->setData('alias', $this->domainAlias);
 
         $this->setData('data', $index);
-
-        $this->addView("{$this->domainAlias}::{$this->viewPath}.index");
 
         $this->useCollection({{API_RESOURCE_NAME}}ResourceCollection::class,'data');
 
