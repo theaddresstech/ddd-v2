@@ -3,7 +3,6 @@
 namespace Src\Domain\User\Http\Controllers\Auth;
 
 use Src\Infrastructure\Http\AbstractControllers\BaseController as Controller;
-use Illuminate\Foundation\Auth\SendsPasswordResetEmails;
 
 class ForgotPasswordController extends Controller
 {
@@ -39,7 +38,6 @@ class ForgotPasswordController extends Controller
     |
     */
 
-    use SendsPasswordResetEmails;
     /**
      * Create a new controller instance.
      *

@@ -11,22 +11,11 @@ use Src\Domain\Users\Repositories\Contracts\TeamRepository;
 use Src\Domain\User\Entities\Traits\CustomAttributes\UserAttributes;
 use Src\Domain\User\Repositories\Contracts\UserRepository;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Laravel\Passport\HasApiTokens;
 
 class User extends Authenticatable
 {
-    use Notifiable, UserRelations, UserAttributes, HasFactory;
-
-    /**
-     * @var array
-     */
-    public static $logAttributes = ["*"];
-
-    /**
-     * The attributes that are going to be logged.
-     *
-     * @var array
-     */
-    protected static $logName = 'User';
+    use Notifiable, UserRelations, UserAttributes, HasFactory,HasApiTokens;
 
     /**
      * define belongsTo relations.

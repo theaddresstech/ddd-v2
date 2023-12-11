@@ -4,7 +4,6 @@ namespace Src\Domain\User\Http\Controllers\Auth;
 
 use Illuminate\Http\Request;
 use Src\Infrastructure\Http\AbstractControllers\BaseController as Controller;
-use Illuminate\Foundation\Auth\ResetsPasswords;
 
 class ResetPasswordController extends Controller
 {
@@ -39,9 +38,6 @@ class ResetPasswordController extends Controller
     | explore this trait and override any methods you wish to tweak.
     |
     */
-
-    use ResetsPasswords;
-
     /**
      * Where to redirect users after resetting their password.
      *

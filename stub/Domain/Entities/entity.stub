@@ -12,18 +12,6 @@ class {{NAME}} extends Model
     use {{NAME}}Relations, {{NAME}}Attributes;
 
     /**
-     * @var array
-     */
-    public static $logAttributes = ["*"];
-
-    /**
-     * The attributes that are going to be logged.
-     *
-     * @var array
-     */
-    protected static $logName = '{{NAME}}';
-
-    /**
      * define belongsTo relations.
      *
      * @var array
