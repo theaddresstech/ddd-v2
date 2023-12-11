@@ -63,10 +63,11 @@ class Directory extends Command
      */
     public function handle()
     {
-        
+        /*
         Artisan::call('livewire:publish',[
             '--assets'=>true
         ]);
+        */
 
         //$this->info("Livewire assets Published");
         
