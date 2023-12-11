@@ -61,11 +61,13 @@ class ResetPasswordController extends Controller
 
     public function showResetForm(Request $request, $token = null)
     {
+        /*
         return view("{$this->domainAlias}::{$this->viewPath}.auth.reset-form",[
             'title' => 'Rest Password',
             'token' => $token,
             'email' => $request->email,
         ]);
+        */
     }
 
 }

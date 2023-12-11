@@ -80,7 +80,7 @@ class RegisterController extends Controller
      * Create a new user instance after a valid registration.
      *
      * @param  array  $data
-     * @return \App\User
+     * @return \Src\Domain\User\Entities\User
      */
     protected function create(array $data)
     {
@@ -98,9 +98,11 @@ class RegisterController extends Controller
      */
     public function showRegistrationForm()
     {
+        /*
         return view("{$this->domainAlias}::{$this->viewPath}.auth.register", [
             'title' => __('main.login')
         ]);
+        */
     }
 
 }

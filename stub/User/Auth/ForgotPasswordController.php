@@ -52,9 +52,11 @@ class ForgotPasswordController extends Controller
 
     public function showLinkRequestForm()
     {
+        /*
         return view("{$this->domainAlias}::{$this->viewPath}.auth.forgot-password",[
             'title' => 'Forget Password',
         ]);
+        */
     }
 
 }
