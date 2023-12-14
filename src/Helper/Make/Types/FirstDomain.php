@@ -104,7 +104,7 @@ class FirstDomain extends Maker
     private function createAuthControllers($values){
         File::copyDirectory(Path::stub($values['domain'],'Auth'),Path::toDomain($values['domain'],'Http','Controllers','Auth'));
         //File::copyDirectory(Path::stub($values['domain'],'auth-view','auth'),Path::toDomain($values['domain'],'Resources','Views','user','auth'));
-        File::append(Path::toDomain($values['domain'],'Routes','web','auth.php'),"");
+        File::append(Path::toDomain($values['domain'],'Routes','api','auth.php'),"\nRoute::post('/login','Auth\LoginController');\n");
 
 
         File::deleteDirectory(Path::toDomain($values['domain'],'Grapqhl'));
