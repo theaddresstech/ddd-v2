@@ -6,6 +6,7 @@ use Src\Domain\User\Http\Resources\User\UserResource;
 use Src\Infrastructure\Http\AbstractControllers\BaseController as Controller;
 use theaddresstech\DDD\Traits\Responder;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 
 class LoginController extends Controller
 {
