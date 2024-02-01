@@ -106,6 +106,8 @@ class Directory extends Command
                 //$this->info("finished adding file name ".$file."to Folder ".$folder);
             }
         }
+        File::delete(app_path().DIRECTORY_SEPARATOR."Models".DIRECTORY_SEPARATOR."User.php");
+
 
         //$this->info("started adding routesss ");
 
