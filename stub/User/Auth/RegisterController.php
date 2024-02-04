@@ -7,6 +7,8 @@ use Src\Infrastructure\Http\AbstractControllers\BaseController as Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use theaddresstech\DDD\Traits\Responder;
+use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 
 class RegisterController extends Controller
 {
