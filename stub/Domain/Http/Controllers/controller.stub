@@ -58,15 +58,13 @@ class {{NAME}}Controller extends Controller
      */
     public function index(Request $request)
     {
-        $index = $this->{{NAME_REPO_VAR}}->spatie()->all();
+        $index = $this->{{NAME_REPO_VAR}}->spatie()->paginate();
 
         $this->setData('title', __('main.show-all') . ' ' . __('main.{{VIEW_RESOURCE}}'));
 
         $this->setData('alias', $this->domainAlias);
 
         $this->setData('data', $index);
-
-        $this->addView("{$this->domainAlias}::{$this->viewPath}.index");
 
         $this->useCollection({{API_RESOURCE_NAME}}ResourceCollection::class,'data');
 
@@ -83,8 +81,6 @@ class {{NAME}}Controller extends Controller
         $this->setData('title', __('main.add') . ' ' . __('main.{{VIEW_RESOURCE}}'), 'web');
 
         $this->setData('alias', $this->domainAlias,'web');
-
-        $this->addView("{$this->domainAlias}::{$this->viewPath}.create");
 
         $this->setApiResponse(fn()=> response()->json(['create_your_own_form'=>true]));
 
@@ -120,15 +116,15 @@ class {{NAME}}Controller extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show({{NAME}} ${{VIEW_RESOURCE}})
+    public function show(${{VIEW_RESOURCE}})
     {
+        ${{VIEW_RESOURCE}}=$this->{{NAME_REPO_VAR}}->spatie()->find(${{VIEW_RESOURCE}});
+
         $this->setData('title', __('main.show') . ' ' . __('main.{{VIEW_RESOURCE}}') . ' : ' . ${{VIEW_RESOURCE}}->id, 'web');
 
         $this->setData('alias', $this->domainAlias,'web');
 
         $this->setData('show', ${{VIEW_RESOURCE}});
-
-        $this->addView("{$this->domainAlias}::{$this->viewPath}.show");
 
         $this->useCollection({{API_RESOURCE_NAME}}Resource::class,'show');
 
@@ -148,8 +144,6 @@ class {{NAME}}Controller extends Controller
         $this->setData('alias', $this->domainAlias,'web');
 
         $this->setData('edit', ${{VIEW_RESOURCE}});
-
-        $this->addView("{$this->domainAlias}::{$this->viewPath}.edit");
 
         $this->useCollection({{API_RESOURCE_NAME}}Resource::class,'edit');
 

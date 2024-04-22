@@ -103,8 +103,8 @@ class FirstDomain extends Maker
 
     private function createAuthControllers($values){
         File::copyDirectory(Path::stub($values['domain'],'Auth'),Path::toDomain($values['domain'],'Http','Controllers','Auth'));
-        File::copyDirectory(Path::stub($values['domain'],'auth-view','auth'),Path::toDomain($values['domain'],'Resources','Views','user','auth'));
-        File::append(Path::toDomain($values['domain'],'Routes','web','auth.php'),"\nAuth::routes();\n");
+        //File::copyDirectory(Path::stub($values['domain'],'auth-view','auth'),Path::toDomain($values['domain'],'Resources','Views','user','auth'));
+        File::append(Path::toDomain($values['domain'],'Routes','api','auth.php'),"\nRoute::post('/login','Auth\LoginController');\n");
 
 
         File::deleteDirectory(Path::toDomain($values['domain'],'Grapqhl'));
@@ -134,14 +134,14 @@ class FirstDomain extends Maker
         ]);
 
         $controller = ['Dashboard','Http','Controllers','DashboardController.php'];
-        $resource = ['Dashboard','Resources','Views','dashboard','index.blade.php'];
+        //$resource = ['Dashboard','Resources','Views','dashboard','index.blade.php'];
         $route = ['Dashboard','Routes','web','auth.php'];
 
         File::makeDirectory(Path::toDomain('Dashboard','Http','Controllers'),0755,true);
         File::put(Path::toDomain(...$controller), File::get(Path::stub(...$controller)));
 
-        File::makeDirectory(Path::toDomain('Dashboard','Resources','Views','dashboard'),0755,true);
-        File::put(Path::toDomain(...$resource), File::get(Path::stub(...$resource)));
+        //File::makeDirectory(Path::toDomain('Dashboard','Resources','Views','dashboard'),0755,true);
+        //File::put(Path::toDomain(...$resource), File::get(Path::stub(...$resource)));
 
         File::put(Path::toDomain(...$route), File::get(Path::stub(...$route)));
     }

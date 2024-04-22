@@ -95,7 +95,7 @@ class Crud extends Maker
         ]);
 
         // Create Views
-        $this->views($values);
+        //$this->views($values);
 
         // // Create Datatable
 //        Datatable::createService([

@@ -2,11 +2,15 @@
 
 namespace Src\Domain\User\Http\Controllers\Auth;
 
+use Src\Domain\User\Http\Resources\User\UserResource;
 use Src\Infrastructure\Http\AbstractControllers\BaseController as Controller;
-use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use theaddresstech\DDD\Traits\Responder;
+use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 
 class LoginController extends Controller
 {
+    use Responder;
     /**
      * View Path.
      *
@@ -28,19 +32,6 @@ class LoginController extends Controller
      */
     protected $domainAlias = 'users';
 
-    /*
-    |--------------------------------------------------------------------------
-    | Login Controller
-    |--------------------------------------------------------------------------
-    |
-    | This controller handles authenticating users for the application and
-    | redirecting them to your home screen. The controller uses a trait
-    | to conveniently provide its functionality to your applications.
-    |
-    */
-
-    use AuthenticatesUsers;
-
     /**
      * Where to redirect users after login.
      *
@@ -58,33 +49,27 @@ class LoginController extends Controller
         $this->middleware('guest')->except('logout');
     }
 
-    /**
-     * Show the application's login form.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function showLoginForm()
+    public function __invoke(Request $request)
     {
-        return view("{$this->domainAlias}::{$this->viewPath}.auth.login", [
-            'title' => __('main.login')
-        ]);
-    }
+        try{
+            if(!auth()->attempt(['email'=>$request->email,'password' =>$request->password,])){
+                return response()->json(['message' => 'email or password incorrect!',], 401);
+            }
 
-    /**
-     * @Override
-     *
-     * The user has been authenticated.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  mixed  $user
-     * @return mixed
-     */
-    protected function authenticated()
-    {
-        if (auth()->check()) {
-            return redirect()->intended(route('dashboard'));
+            $user = \auth()->user();
+
+            $this->setData('data', $user);
+
+            $this->useCollection(UserResource::class, 'data');
+            if ($request->wantsJson()) {
+                $this->setData('meta', [
+                    'token' => $user->createToken('admin_token')->accessToken, //todo add function to generate token
+                ]);
+            }
         }
-
-        return redirect()->intended($this->redirectPath());
+        catch(\Exception $exception){
+            $this->setApiResponse(fn() => response(['message' => $exception->getMessage()],Response::HTTP_CONFLICT));
+        }
+        return $this->response();
     }
 }
